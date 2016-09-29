@@ -15,7 +15,7 @@ RUN yum -y install /tmp/jdk-8-linux-x64.rpm
 
 RUN alternatives --install /usr/bin/java java /usr/java/latest/bin/java 1 &&  alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 1 &&  alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 1
 
-# Uninstalling wget
-RUN yum -y erase wget
+# Uninstalling wget && Removing rpm
+RUN yum -y erase wget && rm /tmp/jdk-8-linux-x64.rpm
 
 ENV JAVA_HOME /usr/java/latest
