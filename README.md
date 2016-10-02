@@ -1,2 +1,2 @@
 # __docker-java__
-Conjunto de imagenes docker con Oracle java
+Set of docker images with Oracle Java
